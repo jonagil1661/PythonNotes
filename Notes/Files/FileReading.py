@@ -35,7 +35,7 @@ import os # OS module
 if not os.path.exists("FileReadingDemo.txt"):
     x = input("Would you like to create a new file? (y/n): ")
     if x is "y":
-        file3 = open("FileReadingDemo.txt", "x")
+        file3 = open("FileReadingDemo.txt", "x") # create a new file
         file3 = open("FileReadingDemo.txt", "w")
         file3.write("This is a demo file that will be deleted...")   
 
@@ -43,8 +43,11 @@ if os.path.exists("FileReadingDemo.txt"):
         x = input("Would you like to delete FileReadingDemo.txt? (y/n): ")
         if x is "y":
             print("Path exists... Now deleting...")
-            os.remove("FileReadingDemo.txt")
+            os.remove("FileReadingDemo.txt") # delete file
 else:
     file3 = open("FileReadingDemo.txt", "r")
     print(file3.read())
     print("File doesn't exist")
+
+# you can even remove empty directories with this os command:
+# os.rmdir("folder")
